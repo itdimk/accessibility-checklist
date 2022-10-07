@@ -1,0 +1,81 @@
+﻿@function to-rem($pixels) {
+  @return $pixels / 16 + rem;
+}
+
+$font-family: 'Open Sans', sans-serif;
+$max-width: 1336px;
+$container-padding: 2rem;
+
+$font-weights: (
+        regular: 400,
+        semi-bold: 600,
+        bold: 700
+);
+
+$font-sizes: (
+        300: to-rem(20),
+        400: to-rem(28),
+        500: to-rem(32),
+        600: to-rem(40),
+        700: to-rem(64),
+        800: to-rem(76),
+        900: to-rem(96)
+);
+
+$colors: (
+        primary-400: #FFB400,
+        neutral-100: #FFF,
+        neutral-600: #494945,
+        neutral-700: #282828,
+);
+
+$padding-top: (
+        6: 6rem,
+);
+
+
+@each $color, $shade in $colors {
+  .text-#{$color} {
+    color: #{$shade}
+  }
+  .bg-#{$color} {
+    background-color: #{$shade}
+  }
+}
+
+@each $name, $value in $font-weights {
+  .fw-#{$name} {
+    font-weight: $value;
+  }
+}
+
+@each $name, $value in $font-sizes {
+  .fs-#{$name} {
+    font-size: $value;
+  }
+}
+
+@each $name, $value in $padding-top {
+  .pt-#{$name} {
+    padding-top: $value;
+  }
+}
+
+.lh-68 {
+  line-height: 4.25rem;
+}
+
+.lh-88 {
+  line-height: 5.5rem;
+}
+
+.lh-130 {
+  line-height: 8rem;
+}
+
+.max-ch-30 {
+  max-width: 30ch;
+}
+
+
+

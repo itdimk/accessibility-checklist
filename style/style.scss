@@ -1,0 +1,51 @@
+@use "sass:map";
+@import "reset.css";
+@import "utility";
+
+body {
+  font-family: $font-family;
+}
+
+.container {
+  max-width: min(#{$max-width}, 100% - #{$container-padding} * 2);
+  margin-inline: auto;
+  min-height: 100vh;
+}
+
+ul {
+  position: relative;
+}
+
+ul:after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 100%;
+  left: -3rem;
+  top: 0;
+  background-color: map.get($colors, "primary-400");
+}
+
+// Composition
+
+.flow {
+  display: flex;
+  flex-direction: column;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-spacer, 1rem);
+}
+
+.flex-row {
+  display: flex;
+  gap: var(--gap, 1rem);
+  align-items: center;
+}
+
+.corner-image {
+  position: absolute;
+  right: 4rem;
+  bottom: 0;
+  z-index: -1;
+}

@@ -1,13 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Accessibility checklist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.scss">
+</head>
+<body class="text-neutral-100 bg-neutral-700">
+<div class="container flow">
+    <header class="pt-6">
+        <h1 class="fs-900 fw-bold">Accessibility Checklist</h1>
+        <h2 class="fs-700 fw-semi-bold text-primary-400 max-ch-30">A seriously simple UI checklist made for
+            designers</h2>
+    </header>
+    <main style="--flow-spacer: 7rem">
+        <ul class="fs-500 fw-regular lh-68">
+            <li>Reviewed by a certified Accessibility expert</li>
+            <li>Includes links to resources, recommended plugins, and tools</li>
+            <li>Helps you stay organized and aligned with your team</li>
+        </ul>
+    </main>
+    <footer class="flex-row" style="--flow-spacer: 6rem">
+        <img src="./images/itx-logo.svg" alt="itx">
+        <p class="fs-400 fw-semi-bold">Published in October 2022 by the ITX team</p>
+    </footer>
+    <img class="corner-image" src="images/people.svg" alt=""/>
+</div>
+</body>
 </html>
