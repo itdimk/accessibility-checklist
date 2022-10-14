@@ -1,6 +1,6 @@
 @use "sass:map";
-@import "reset.css";
-@import "utility";
+@use "reset.css" as *;
+@use "utility" as *;
 
 body {
   font-family: $font-family;
@@ -12,18 +12,25 @@ body {
   min-height: 100vh;
 }
 
-ul {
+
+.stripe {
   position: relative;
 }
 
-ul:after {
+.stripe:after {
   content: "";
   position: absolute;
   width: 9px;
   height: 100%;
-  left: -3rem;
+  left: -5rem;
   top: 0;
   background-color: map.get($colors, "primary-400");
+}
+
+.even-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap, 6rem);
 }
 
 // Composition
@@ -46,6 +53,22 @@ ul:after {
 .corner-image {
   position: absolute;
   right: 4rem;
-  bottom: 0;
+  bottom: calc(var(--index, 0) * -100vh);
   z-index: -1;
+}
+
+
+.person-card {
+  padding: 4rem;
+  border-radius: 2rem;
+  position: relative;
+}
+
+.person-card::before {
+  content: "";
+  position: absolute;
+  width: 77.5%;
+  height: 9px;
+  background-color: map.get($colors, 'primary-400');
+  top: 0;
 }

@@ -1,5 +1,7 @@
-﻿@function to-rem($pixels) {
-  @return $pixels / 16 + rem;
+﻿@use 'sass:math';
+
+@function to-rem($pixels) {
+  @return math.div($pixels , 16) + rem;
 }
 
 $font-family: 'Open Sans', sans-serif;
@@ -18,6 +20,7 @@ $font-sizes: (
         500: to-rem(32),
         600: to-rem(40),
         700: to-rem(64),
+        750: to-rem(68),
         800: to-rem(76),
         900: to-rem(96)
 );
@@ -25,12 +28,14 @@ $font-sizes: (
 $colors: (
         primary-400: #FFB400,
         neutral-100: #FFF,
-        neutral-600: #494945,
+        neutral-600: hsla(48, 3%, 28%, 0.3),
         neutral-700: #282828,
 );
 
 $padding-top: (
         6: 6rem,
+        7: 7rem,
+        8: 8rem,
 );
 
 
@@ -61,21 +66,48 @@ $padding-top: (
   }
 }
 
-.lh-68 {
-  line-height: 4.25rem;
-}
 
-.lh-88 {
+.lh-1_35 {
   line-height: 5.5rem;
 }
 
-.lh-130 {
-  line-height: 8rem;
+.lh-2_125 {
+  line-height: 2.125;
+}
+
+.lh-1_5 {
+  line-height: 1.5;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.ml-5 {
+  margin-left: 5rem;
+}
+
+.pb-4 {
+  padding-bottom: 4rem;
+}
+
+.pb-4_5 {
+  padding-bottom: 4.5rem;
 }
 
 .max-ch-30 {
   max-width: 30ch;
 }
 
+.underline {
+  text-decoration: underline;
+}
 
+.relative {
+  position: relative;
+}
 

@@ -10,25 +10,98 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/style.scss">
 </head>
-<body class="text-neutral-100 bg-neutral-700">
+<body class="text-neutral-100 bg-neutral-700 fs-400">
 <div class="container flow">
-    <header class="pt-6">
-        <h1 class="fs-900 fw-bold">Accessibility Checklist</h1>
-        <h2 class="fs-700 fw-semi-bold text-primary-400 max-ch-30">A seriously simple UI checklist made for
+    <header class="pt-7">
+        <h1 class="fs-900 fw-bold lh-1_35">Accessibility Checklist</h1>
+        <h2 class="fs-700 fw-semi-bold text-primary-400 max-ch-30 lh-1_35 mt-1">A seriously simple UI checklist made for
             designers</h2>
     </header>
-    <main style="--flow-spacer: 7rem">
-        <ul class="fs-500 fw-regular lh-68">
+    <section style="--flow-spacer: 8rem">
+        <ul class="fs-500 fw-regular lh-2_125 stripe">
             <li>Reviewed by a certified Accessibility expert</li>
             <li>Includes links to resources, recommended plugins, and tools</li>
             <li>Helps you stay organized and aligned with your team</li>
         </ul>
-    </main>
-    <footer class="flex-row" style="--flow-spacer: 6rem">
+    </section>
+    <section class="flex-row pb-4" style="--flow-spacer: 9rem">
         <img src="./images/itx-logo.svg" alt="itx">
-        <p class="fs-400 fw-semi-bold">Published in October 2022 by the ITX team</p>
-    </footer>
+        <p class="fw-semi-bold">Published in October 2022 by the ITX team</p>
+    </section>
+
     <img class="corner-image" src="images/people.svg" alt=""/>
+
+    <main class="flow pb-4_5" style="--flow-spacer: 9rem">
+        <div class="flex-row">
+            <span class="fs-750">👋</span>
+            <h2 class="fs-800 lh-1_35"> Hi friends!</h2>
+        </div>
+        <div class="ml-5 lh-1_5 fw-semi-bold stripe" style="--flow-spacer: 5rem">
+            <p>
+                This is an Accessibility Checklist created by UX designers passionate about inclusive design. Along our
+                organization-wide journey to learn about accessibility, we identified a missing component – a tactical
+                guide that instructs designers on how to put theory to practice. So, we made one.
+            </p>
+            <br>
+            <p>
+                We hope this inspires you to design more inclusively, so that we can build a better world together!
+                Here’s a few other related resources created by our team:
+            </p>
+            <br>
+            <ul class="fw-regular underline" role="list">
+                <li>🔗 Getting Started with Product Inclusion eBook</li>
+                <li>🔗 Diversity & Inclusion Design Guide (a learning path)</li>
+                <li>🔗 3-part Blog Series on Digital Accessibility by Susi Pallero from DALAT</li>
+            </ul>
+            <br>
+            <p>
+                Do you have feedback? We’d love to hear from you!
+                <br/>Email us at accessibility@itx.com
+            </p>
+        </div>
+    </main>
+
+    <main class="flow pb-4_5" style="--flow-spacer: 9rem">
+        <div class="flex-row">
+            <span class="fs-750">👉</span>
+            <h2 class="fs-800 lh-1_35"> About the Creators</h2>
+        </div>
+        <div class="even-columns" style="--flow-spacer: 3rem">
+            <div class="person-card bg-neutral-600">
+                <div class="flex-row" style="--gap: 2rem">
+                    <img src="images/avatar-1.png" alt=""/>
+                    <div>
+                        <p class="fs-600 fw-bold">Antonella Iselli</p>
+                        <p class="fs-300 underline">LinkedIn profile</p>
+                    </div>
+                </div>
+                <p class="mt-2">
+                    I'm an Argentinian Senior UX Designer based in Barcelona, Spain. I studied visual and multimedia
+                    arts at the Universidad Nacional de las Artes (UNA) and taught as an Expressive Media Teacher for
+                    over 10 years at the University of Buenos Aires (UBA). I’m passionate about solving problems and
+                    simplifying complex structures.
+                </p>
+            </div>
+
+            <div class="person-card bg-neutral-600">
+                <div class="flex-row" style="--gap: 2rem">
+                    <img src="images/avatar-2.png" alt=""/>
+                    <div>
+                        <p class="fs-600 fw-bold">Tyler Coderre</p>
+                        <p class="fs-300 underline">LinkedIn profile</p>
+                    </div>
+                </div>
+                <p class="mt-2">
+                    I'm a Senior UX Designer based in Buffalo, New York with over 10+ years working on web and product
+                    design. I have a Bachelor of Fine Arts in Emerging Practices with a minor in Game Design from the
+                    University at Buffalo. I enjoy solving problems and delivering joy through design.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <img class="corner-image" style="--index:1" src="images/girl.svg" alt=""/>
+
 </div>
 </body>
 </html>
